@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resumen de lenguajes</title>
+		
+		<!-- TIPICO -->
+			<!-- RANGO DE TAMAÑOS OBLIGATORIOS -- 
+			<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+			<!-- TAMAÑO INICIAL -->
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!---->
+			
+			<!-- CHARSET ESPAÑOL -->
+			<meta charset="UTF-8">
+			<!-- CHARSET RUSO -->
+			<meta charset="windows-1251">
+			
+		
+		
+		<!-- METADATAS FORMALES -->
+			<meta name="author" content="Gio">
+			<meta name="description" content="">
+			
+		
+		
+		<!-- RECURSOS --
+			<base href="#carpeta#" >
+			<link href="#.css" rel="stylesheet" type="text/css" media="all">
+			<script src="#.js"></script>
+		<!-- -->
+        <link href="https://gio.rf.gd/CSS/menuSimple.css" rel="stylesheet" type="text/css" media="all">
+
+
+		<!-- LOGICA Y ESTILO -->
+			<?PHP
+				
+			?>
+			
+			<script>
+                class Code{
+                    constructor(id){
+                        this.reservadas=[
+                            ["abstract", "arguments",  "await", "break", "case", "catch", "class", "continue", "default", "delete", "do", "else", "export", "extends", "finally", "for", "if", "import", "in", "instanceof", "new", "return", "super", "switch", "this", "throw", "try", "typeof", "void", "while", "width", "with", "yield", "var", "function", "const", "let", "static"],
+                            ["undefined", "null", "true", "false"],
+                            ["enum", "implements", "interface", "package", "private", "protected", "public"],
+                            ["abstract", "boolean", "byte", "char", "double", "final", "float", "goto", "int", "long", "native", "short", "synchronized", "throws", "transient", "volatile"],
+                            ["+", "-", "/", "*", "**", "%"],
+                            ["=", "+=", "-=", "*=", "/=", "%=", "**=", "<<=", ">>=", ">>>=", "&=", "|=", "&&=", "||=", "^=", "??="]
+                        ],
+                        [
+                            ["css"]
+                        ];
+                    }
+                    otro(){
+                        this.x="Hola";
+                    }
+
+                } var code = new Code();
+			</script>
+			<style>
+        nav {
+          position: fixed;
+          display: inline-block;
+          width: 100%;
+          background-color: #2175bc;
+          box-shadow: 0 0 4px rgba(0,0,0,.7);
+          top: 0;
+          z-index: 1;
+          user-select: none;
+        }
+        nav > ul {
+            position: relative;
+            margin: 0 auto;
+        }
+        nav > ul > li {
+            display: inline;
+        }
+        nav > ul > li > a {
+            font-family: Arial;
+            font-size: 18px;
+            text-decoration: none;
+            float: left;
+            padding: 10px;
+            color: #eee;
+            text-shadow: 1px 1px 2px black;
+            cursor: pointer;
+        }
+        nav > ul > li > a:visited {
+            color: #eee;
+            background-color: #ffffff00;
+        }
+        nav > ul > li > a:hover {
+            color: #fff;
+            background-color: #1b609a;
+        }
+        nav > ul > li > a:focus {
+            color: #fff;
+            background-color: #1b609a;
+        }
+        nav > ul > li > a:active {
+            background-color: #3586ca;
+        }
+
+        main, footer{
+            position: relative;
+            top: 41px;
+        }
+      </style>
+      
+			<style>
+                :root{
+                    --tra: 40;
+                }
+                *{
+                    margin: 0;
+                    padding: 0;
+                }
+                html{
+                    width: min-content;
+                }
+                body{
+                    background-color: #333;
+                }
+                main{
+                    position: absolute;
+                    color: #ccc;
+                    top: 25px;
+                }
+                section{
+                    margin: 10px;
+                }
+                h2{
+                    text-decoration: underline;
+                    border-top-style: dashed;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    margin-bottom: 10px;
+                }
+                h3{
+                    margin-left: 20px;
+                    margin-top: 5px;
+                }
+                p,table,h4{
+                    margin-left: 30px;
+                }
+                p{
+                    margin-bottom: 10px;
+                }
+                b{
+                    text-decoration: underline;
+                }
+				th, td{
+                    background-color: #ffffff1f;
+                    border-bottom: 2px solid #ffffff17;
+                    padding: 3px;
+                }
+
+                .espaciado{
+                    height: 40px;
+                    display: inline-block;
+                }
+
+                code{
+                    background: #00000020;
+                    display: inline-block;
+                    padding: 5px;
+                    font-size: 1em;
+                }
+                    .codeJs,.codeArduino,.codeCpp,.codeCss,.codeHtml,.codePhp,.codeCmd{
+                        margin: 10px 0 10px 40px;
+                        box-shadow: 0 0px 3px 5px rgb(0 0 0 / 20%);
+                        border-style: solid;
+                        border-width: 0 0 0 4px;
+                    }
+                    .codeJs{
+                        border-left-color: #bdbd00;
+                    }
+                    .codeArduino{
+                        border-left-color: #19949b;
+                    }
+                    .codeCpp{
+                        border-left-color: #0161c7;
+                    }
+                    .codeCss{
+                        border-left-color: #31a4d5;
+                    }
+                    .codeHtml{
+                        border-left-color: #e96228;
+                    }
+                    .codePhp{
+                        border-left-color: #7377ad;
+                    }
+                    .codeCmd{
+                        border-left-color: #171717;
+                    }
+
+                    .etiquetaHtml{
+                        color: #a24b00;
+                    }
+                    .atributoHtml{
+                        color: #d06900;
+                    }
+                    .comentarioHtml, .comentarioBloqueJs, .comentarioLineaJs{
+                        color: #3b9d3b;
+                    }
+                    .comillasDJs,.comillaSJs{
+                        color: #a31515;
+                    }
+
+                nav{
+                    user-select: none;
+                }
+                nav > ul > li > a {
+                    cursor: pointer;
+                }
+
+			</style>
+    </head>
+
+    <body>
+		<!-- CABECERA -->
+        <header>
+			
+		</header>
+		
+		<!-- MENU DE NAVEGACION -->
+        <nav>
+			<ul>
+                <li><a onclick="miScroll('html', -13);">HTML</a></li>
+                <li><a onclick="miScroll('javascript', -13);">JavaScript</a></li>
+                <li><a onclick="miScroll('css', -13);">CSS</a></li>
+                <li><a onclick="miScroll('php', -13);">PHP</a></li>
+                <li><a onclick="miScroll('cpp', -13);">C++</a></li>
+                <li><a onclick="miScroll('arduino', -13);">Arduino</a></li>
+                <li><a onclick="miScroll('cmd', -13);">CMD</a></li>
+            </ul>
+		</nav>
+		
+		<!-- CUERPO -->
+		<main>
+			<section id="html">
+				<article>
+					<h2>HTML:</h2>
+                    <p>HTML es un lenguaje de marcado (que utiliza etiquetas), <b>es el encargado de definir estructuras</b> de páginas web y aplicaciones para celular.</p>
+
+                    <h3>Comentarios:</h3>
+                    <p>En HTML solo existe una forma de comentar y es en bloque. Para comenzar el comentario se usa <code>;;!--</code> y para finalizar el comentario se usa <code>--></code>.
+                    <h4>Ejemplo de comentario:</h4>
+                    <code tab="6" class="codeHtml">
+                        <!-- Este es un comentario en HTML.
+                        Las etiquetas se ignoran, por ejemplo:
+                        <p>Párrafo</p>
+                        Ese párrafo jamás será visible en el documento. -->
+                    </code>
+				</article>
+			</section>
+
+            <section id="javascript">
+				<article id="comentariosJS">
+                    <h2>JavaScript:</h2>
+                    <h3>Comentarios:</h3>
+                    <p>Los comentarios <b>son anotaciones</b> del programador. Estas no son ejecutadas, mas bien <b>son para inutilizar partes del codigo, para explicar el funcionamiento de algo o para señalizar zonas</b> (donde ocurre algo en especifico, por ejemplo la sona de input/entrada, procesamiento y output/salida).</p>
+                    <h4>Ejemplos de comentarios:</h4>
+                    <code tab="6" class="codeJs">
+                        //COMENTARIO DE UNA SOLA LINEA
+                        
+                        /*
+                        COMENTARIO
+                        EN
+                        BLOQUE
+                        */
+                    </code>
+                </article>
+
+                <article id="variablesJS">
+					<h3>Declaracion de Variables:</h3>
+                    <p>Las variables se usan para almacenar informacion (valores numericos, digitos, cadenas de texto y objetos) en memoria. Para especificar sus identificadores (nombres) se permite el uso de letras en minuscula, mayuscula, numeros a partir del segundo dígito (un identificador no puede comenzar con un número), los signos especiales <code>$</code>, <code>_</code>, <code>ñ</code> y las letras con acentos.</p>
+                    <code tab="6" class="codeJs">var identificador; //VARIABLE VACIA
+                        var a, b, c; //MULTIPLES VARIABLES VACIAS
+
+                        var identificador = 12; //VARIABLE CON VALOR ENTERO
+                        var a = 14, b = 'Hola', c = "Chao"; //MULTIPLES VARIABLES CON VALORES
+                    </code>
+
+                    <h3>Operadores de Asignacion:</h3>
+                    <p></p>
+                    <table>
+                        <caption>Operadores de asignación compuestos</caption>
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Operador abreviado</th>
+                                <th>Significado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a>Asignación</a></td>
+                                <td><code>x = y</code></td>
+                                <td><code>x = y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de adición</a></td>
+                                <td><code>x += y</code></td>
+                                <td><code>x = x + y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de resta</a></td>
+                                <td><code>x -= y</code></td>
+                                <td><code>x = x - y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de multiplicación</a></td>
+                                <td><code>x *= y</code></td>
+                                <td><code>x = x * y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de división</a></td>
+                                <td><code>x /= y</code></td>
+                                <td><code>x = x / y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de residuo</a></td>
+                                <td><code>x %= y</code></td>
+                                <td><code>x = x % y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de exponenciación</a></td>
+                                <td><code>x **= y</code></td>
+                                <td><code>x = x ** y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de desplazamiento a la izquierda</a></td>
+                                <td><code>x &lt;&lt;= y</code></td>
+                                <td><code>x = x &lt;&lt; y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de desplazamiento a la derecha</a></td>
+                                <td><code>x &gt;&gt;= y</code></td>
+                                <td><code>x = x &gt;&gt; y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de desplazamiento a la derecha sin signo</code></a></td>
+                                <td><code>x &gt;&gt;&gt;= y</td>
+                                <td><code>x = x &gt;&gt;&gt; y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación AND bit a bit</a></td>
+                                <td><code>x &amp;= y</code></td>
+                                <td><code>x = x &amp; y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación XOR bit a bit</a></td>
+                                <td><code>x ^= y</code></td>
+                                <td><code>x = x ^ y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación OR bit a bit</a></td>
+                                <td><code>x |= y</code></td>
+                                <td><code>x = x | y</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación AND lógico</a></td>
+                                <td><code>x &amp;&amp;= y</code></td>
+                                <td><code>x &amp;&amp; (x = y)</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación OR lógico</a></td>
+                                <td><code>x ||= y</code></td>
+                                <td><code>x || (x = y)</code></td>
+                            </tr>
+                            <tr>
+                                <td><a>Asignación de anulación lógica</a></td>
+                                <td><code>x ??= y</code></td>
+                                <td><code>x ?? (x = y)</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Deteccion de eventos:</h3>
+                    <code tab="6" class="codeJs">
+                        //FORMA 1:
+                        function miFuncion(){
+                            //ACCION
+                        }
+                        documnet.getElementById("elemento").evento=miFuncion;
+
+                        //FORMA 2:
+                        documnet.getElementById("elemento").addEventListener("evento", function(e){
+                            e.innerHTML="Hola";
+                        }, false);
+                    </code>
+				</article>
+
+                <article id="dimencionesJS">
+                    <h3>Dimenciones de elementos:</h3>
+                    <p>Uno pensaría que con <code>elemento.style.width;</code> o con <code>elemento.style.height;</code> podemos averiguar las dimenciones de un elemento, pero no es así a menso que dichas dimenciones estén especificadas dentro del atributo <code>style</code> del elemento HTML, por ejemplo <code>;;div style="height: 10px; width: 20px;"></div></code>, en ese caso si va a funcionar. Pero si las dimenciones de un elemento están especificadas desde un archivo CSS, se tendrá que hacer uso de <code>elemento.clientWidth;</code> y de <code>elemento.clientHeight;</code>.</p>
+                    <h4>Ejemplo de uso:</h4>
+                    <code tab="6" class="codeHtml">
+                        <style>
+                            #segundo{
+                                width: 80px;
+                                height: 70px;
+                            }
+                        </style>
+                        
+                        <div id="primero" style="width: 20px; heigth: 30px;">Div 1</div>
+                        <div id="segundo">Div 2</div>
+
+                        <script>
+                            document.getElementById("primero").style.width;  // 20px
+                            document.getElementById("primero").style.height; // 30px
+
+                            document.getElementById("segundo").clientWidth;  // 80px
+                            document.getElementById("segundo").clientHeight; // 70px
+                        </script>
+                    </code>
+                </article>
+			</section>
+
+            <section id="css">
+				<article>
+					<h2>CSS:</h2>
+                    <p></p>
+                    <h3>Invertir horizontalmente un elemento:</h3>
+                    <p>Se le puede aplicar a cualquier elemento, como puede ser ina imagen, texto y divs.</p>
+                    <code tab="6" class="codeCss">
+                        .elemento {
+                            -moz-transform: scaleX(-1); /* Firefox */
+                            -o-transform: scaleX(-1); /* Opera */
+                            -webkit-transform: scaleX(-1); /* Chrome y Safari */
+                            transform: scaleX(-1); /* w3org */
+                            filter: FlipH; /* Internet Explorer */
+                        }
+                    </code>
+
+                    <h3>Invertir verticalmente un elemento:</h3>
+                    <p>Se le puede aplicar a cualquier elemento, como puede ser ina imagen, texto y divs.</p>
+                    <code tab="6" class="codeCss">
+                        .elemento {
+                            -moz-transform: scaleY(-1); /* Firefox */
+                            -o-transform: scaleY(-1); /* Opera */
+                            -webkit-transform: scaleY(-1); /* Chrome y Safari */
+                            transform: scaleY(-1); /* w3org */
+                            filter: FlipV; /* Internet Explorer */
+                        }
+                    </code>
+				</article>
+			</section>
+
+            <section id="php">
+				<article>
+					<h2>PHP:</h2>
+                    <p></p>
+                    <code tab="6" class="codePhp">
+                        EJE
+                        PLO
+                    </code>
+				</article>
+			</section>
+
+            <section id="cpp">
+				<article>
+					<h2>C++:</h2>
+                    <p>C y C++ son lenguajes de programación que se usan para desarrollar prgramas y sublenguajes (algunos ejemplos de lenguajes hijos de C y C++ son Python </p>
+                    <h3>Tipos de datos fundamentales:</h3>
+                    <p>Caracteres: char (también es un entero), wchar_t
+Enteros: short, int, long, long long
+Números en coma flotante: float, double, long double
+Booleanos: bool
+Vacío: void
+El modificador unsigned se puede aplicar a enteros para obtener números sin signo (por omisión los enteros contienen signo), con lo que se consigue un rango mayor de números naturales.</p>
+                    <code tab="6" class="codeCpp">
+                        EJE
+                        PLO
+                    </code>
+				</article>
+			</section>
+
+            <section id="arduino">
+				<article>
+					<h2>Arduino:</h2>
+                    <p></p>
+                    <code tab="6" class="codeArduino">
+                        EJE
+                        PLO
+                    </code>
+				</article>
+			</section>
+
+            <section id="cmd">
+				<article>
+					<h2>CMD:</h2>
+                    <p></p>
+                    <code tab="6" class="codeCmd">
+                        EJE
+                        PLO
+                    </code>
+				</article>
+			</section>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+            <p style="text-align: center; font-size: 1em; margin-bottom: 30px;">Vos bajando para ver que hay al final <img style="display: inline; width: 1em;" src="img/payaso.png"></p>
+			
+			<aside style="display: none;">
+				
+			</aside>
+		</main>
+		
+		<!-- PIE DE PAGINA -->
+		<footer>
+			
+		</footer>
+		
+		<!-- ESPACIO PARA INCLUIR SCRIPTS -->
+		<div id="parasito">
+			
+		</div>
+		
+        <script>
+            function reemplazar(cadena, obj) {
+                Object.keys(obj).forEach(el => {
+                    const reg=new RegExp(el, "gi")
+                    cadena=cadena.replace(reg, obj[el]);
+                });
+                return cadena;
+            }
+
+            //EJ textoSeguro("Camión.♥"); -> "Cami&#242;n." ñ
+            function textoSeguro(str, html = false){
+                /**/
+                obj ={/*AMPERSAND*/'&': '&#38;',/*SIMBOLOS CORRECTOS*/'¡': '&#161;','¢': '&#162;','£': '&#163;','¤': '&#164;',"á": "&#225;",'¥': '&#165;','¦': '&#166;','§': '&#167;','¨': '&#168;','©': '&#169;','ª': '&#170;','«': '&#171;','¬': '&#172;','®': '&#174;','¯': '&#175;','°': '&#176;','±': '&#177;','²': '&#178;','³': '&#179;','´': '&#180;','µ': '&#181;','¶': '&#182;','·': '&#183;','¸': '&#184;','¹': '&#185;','º': '&#186;','»': '&#187;','¼': '&#188;','½': '&#189;','¾': '&#190;','¿': '&#191;','À': '&#192;','Á': '&#193;','Â': '&#194;','Ã': '&#195;','Ä': '&#196;','Å': '&#197;','Æ': '&#198;','Ç': '&#199;','È': '&#200;','É': '&#201;','Ê': '&#202;','Ë': '&#203;','Ì': '&#204;','Í': '&#205;','Î': '&#206;','Ï': '&#207;','Ð': '&#208;','Ñ': '&#209;','Ò': '&#210;','Ó': '&#211;','Ô': '&#212;','Õ': '&#213;','Ö': '&#214;','×': '&#215;','Ø': '&#216;','Ù': '&#217;','Ú': '&#218;','Û': '&#219;','Ü': '&#220;','Ý': '&#221;','Þ': '&#222;','ß': '&#223;','à': '&#224;','á': '&#225;','â': '&#226;','ã': '&#227;','ä': '&#228;','å': '&#229;','æ': '&#230;','ç': '&#231;','è': '&#232;','é': '&#233;','ê': '&#234;','ë': '&#235;','ì': '&#236;','í': '&#237;','î': '&#238;','ï': '&#239;','ð': '&#240;','ñ': '&#241;','ò': '&#242;','ó': '&#243;','ô': '&#244;','õ': '&#245;','ö': '&#246;','÷': '&#247;','ø': '&#248;','ù': '&#249;','ú': '&#250;','û': '&#251;','ü': '&#252;','ý': '&#253;','þ': '&#254;','ÿ': '&#255;',/*SIMBOLOS GRANDES 1*/'Œ': '&#338;','œ': '&#339;','Š': '&#352;','š': '&#353;','Ÿ': '&#376;','ƒ': '&#402;',/*SIMBOLOS GRANDES 2*/'–': '&#8211;','—': '&#8212;','‘': '&#8216;','’': '&#8217;','‚': '&#8218;','“': '&#8220;','”': '&#8221;','„': '&#8222;','†': '&#8224;','‡': '&#8225;','•': '&#8226;','…': '&#8230;','‰': '&#8240;','€': '&#8264;','™': '&#8282;',/*SIMBOLOS ERRONEOS 1*'☺':'&#1;','☻':'&#2;','♥':'&#3;','♦':'&#4;','♣': '&#5;','♠': '&#6;','•': '&#7;','◘': '&#8;','○': '&#9;','◙': '&#10;','♂': '&#11;','♀': '&#12;','♪': '&#13;','♫': '&#14;','☼': '&#15;','►': '&#16;','◄': '&#17;','↕': '&#18;','‼': '&#19;','¶': '&#20;','§': '&#21;','▬': '&#22;','↨': '&#23;','↑': '&#24;','↓': '&#25;','→': '&#26;','←': '&#27;','∟': '&#28;','↔': '&#29;','▲': '&#30;','▼': '&#31;',/*SIMBOLOS ERRONEOS 2*'⌂': '&#127;','×': '&#158;',/*BORRAR ERRONEOS 1*/'☺':'','☻':'','♥':'','♦':'','♣': '','♠': '','•': '','◘': '','○': '','◙': '','♂': '','♀': '','♪': '','♫': '','☼': '','►': '','◄': '','↕': '','‼': '','¶': '','§': '','▬': '','↨': '','↑': '','↓': '','→': '','←': '','∟': '','↔': '','▲': '','▼': '',/*BORRAR ERRONEOS 2*/'⌂': '','×': ''};
+                
+                console.log(obj.length);
+                return reemplazar(str, obj);
+            }
+
+            function buscarTxt(str, encontrar, sensible = true){
+                var __RAM_s=new Array();
+                __RAM_s = Array.from(str);
+                var encontrar = Array.from(encontrar);
+                var tStr = __RAM_s.length;
+                var tEncontrar = encontrar.length;
+                
+                var pos = new Array();
+                pos[0] = -1;
+                var _pos = 0;
+                
+                var coin = 0; //coincidencias encontradas
+                
+                
+                if(sensible){
+                    for(i = 0; i <= (tStr - 1); i++){
+                        if(__RAM_s[i] == encontrar[coin]){
+                            coin++;
+                        } else {
+                            coin = 0;
+                        }
+                        if(coin == tEncontrar){
+                            pos[_pos] = i - (tEncontrar - 1);
+                            coin = 0;
+                            _pos++;
+                        }
+                    }
+                } else {
+                    for(i = 0; i <= (tStr - 1); i++){
+                        if(aMinusculas(__RAM_s[i]) == aMinusculas(encontrar[coin])){
+                            coin++;
+                        } else {
+                            coin = 0;
+                        }
+                        if(coin == tEncontrar){
+                            pos[_pos] = i - (tEncontrar - 1);
+                            coin = 0;
+                            _pos++;
+                        }
+                    }
+                }
+                return pos;
+            }
+
+            function recortar(str){
+                str=str.split("");
+                strL=str.length;
+                let a=0, b=strL-1;
+                for(let i=0; i<strL; i++){
+                    if(str[i]==" " || str[i]=="\n"){
+                        a++;
+                    } else if(str[i]=="<"&&str[i+1]=="b"&&str[i+2]=="r"&&str[i+3]==">"){
+                        a+=4;
+                        i+=3;
+                    } else{
+                        break;
+                    }
+                }
+                for(let i=strL-1; i>=0; i--){
+                    if(str[i]==" " || str[i]=="\n"){
+                        b--;
+                    } else if(str[i]=="<"&&str[i+1]=="b"&&str[i+2]=="r"&&str[i+3]==">"){
+                        b-=4;
+                        i-=3;
+                    } else{
+                        break;
+                    }
+                }
+                
+                return str.splice(a, b-a+1).join("");
+            }
+
+            function miScroll(id, mas=0){
+                let e=document.getElementById(id);
+                if(e){
+                    let top=e.offsetTop;
+                    scroll(0, top+(mas*1));
+                    return true;
+                }
+                return false;
+            }
+
+            function tab(e){
+                if(e.attributes.tab){
+                    return e.attributes.tab.value*1;
+                }
+                return false;
+            }
+
+            function ajusteTab(e){
+                    let res=recortar(e.innerHTML);
+                        //res=reemplazar(res, {'\n':'<br>'});
+                        res=reemplazar(res, {" ":"&nbsp;"});
+                        res=res.split("\n");
+                        let resL=res.length;
+
+                        let tabI=tab(e);
+                        if(tabI){
+                            let tabRes="";
+                            for(let i=0; i<tabI; i++){
+                                tabRes+="&nbsp;&nbsp;&nbsp;&nbsp;";
+                            }
+                            for(let i=0; i<resL; i++){
+                                res[i]=res[i].replace(tabRes, "");
+                            }
+                        }
+                        
+                        e.innerHTML=res.join("<br>");
+                
+            }
+            
+            function aplicarCode(e){
+                let o=e.innerHTML.split("");
+                let oL=o.length;
+                let res="";
+                let etiqueta=false, comentario=false, js=false, css=false, atributo=false, comillasD=false, comillaS=false;
+                let pos=0;
+                let si=false;
+
+                let acarreo=0;
+
+                //// HTML ////
+                if(e.className=="codeHtml"){
+                    for(let i=0; i<oL-acarreo+1; i++){
+                        //FIN DE COMENTARIO
+                        if(comentario&&o[i]=="-"&&o[i+1]=="-"&&o[i+2]=="&"&&o[i+3]=="g"&&o[i+4]=="t"&&o[i+5]==";"){
+                            res+="--&gt;</span>";
+                            comentario=false;
+                            acarreo=5;
+                            i+=acarreo;
+                            si=true;
+                        }
+                        //COMENTARIO
+                        else if(!comentario&&o[i]=="&"&&o[i+1]=="l"&&o[i+2]=="t"&&o[i+3]==";"&&o[i+4]=="!"&&o[i+5]=="-"&&o[i+6]=="-"){
+                            res+="<span class='comentarioHtml'>&lt;!--";
+                            comentario=true;
+                            acarreo=6;
+                            i+=acarreo;
+                            si=true;
+                        } 
+                        //COMIENZO DE ETIQUETA
+                        else if(!comentario&&!etiqueta&&o[i]=="&"&&o[i+1]=="l"&&o[i+2]=="t"&&o[i+3]==";"){
+                            res+="<span class='etiquetaHtml'>&lt;";
+                            etiqueta=true;
+                            acarreo=3;
+                            i+=acarreo;
+                            si=true;
+                        } 
+                        //FIN DE ETIQUETA
+                        else if(!comentario&&etiqueta&&o[i]=="&"&&o[i+1]=="g"&&o[i+2]=="t"&&o[i+3]==";"){
+                            res+=((atributo)?"</span>":"")+"&gt;</span>";
+                            etiqueta=false;
+                            acarreo=3;
+                            i+=acarreo;
+                            pos=0;
+                            si=true;
+                            atributo=false;
+                        }
+                        
+                        //ATRIBUTO
+                        if(!comentario&&etiqueta&&!atributo&&o[i]=="&"&&o[i+1]=="n"){
+                            atributo=true;
+                            res+="<span class='atributoHtml'>";
+                        }
+
+                        if(!si) {
+                            res+=o[i];
+                            acarreo=1;
+                        }si=false;
+                    }
+                }
+                
+                //// JAVASCRIPT ////
+                else if(e.className=="codeJs"){
+                    for(let i=0; i<oL-acarreo+1; i++){
+                        //FIN DE COMENTARIO EN BLOQUE
+                        if(comentario&&o[i]=="*"&&o[i+1]=="/"){
+                            res+="*/</span>";
+                            comentario=false;
+                            acarreo=1;
+                            i+=acarreo;
+                            si=true;
+                        }
+                        //COMENTARIO EN BLOQUE
+                        else if(!comentario&&!comillasD&&!comillaS&&o[i]=="/"&&o[i+1]=="*"){
+                            res+="<span class='comentarioBloqueJs'>/*";
+                            comentario=true;
+                            acarreo=1;
+                            i+=acarreo;
+                            si=true;
+                        }
+                        //COMENTARIO EN LINEA
+                        else if(!comentario&&!comillasD&&!comillaS&&o[i]=="/"&&o[i+1]=="/"){
+                            res+="<span class='comentarioLineaJs'>//";
+                            let una=true;
+                            while(o[i]!=undefined&&!(o[i]=="<"&&o[i+1]=="b"&&o[i+2]=="r"&&o[i+3]==">")){
+                                if(una){
+                                    i+=2;
+                                    una=false;
+                                }
+                                res+=(o[i]!=undefined)?o[i]:"";
+                                i++;
+                            }
+                            res+="</span>"+(((o[i]=="<"&&o[i+1]=="b"&&o[i+2]=="r"&&o[i+3]==">"))?"<br>":"");
+                            acarreo=3;
+                            i+=acarreo;
+                            si=true;
+                        }
+                        //COMILLAS DOBLES
+                        else if(!comentario&&!comillasD&&!comillaS&&o[i]=='"'&&o[i-1]!="\\"){
+                            res+="<span class='comillasDJs'>\"";
+                            comillasD=true;
+                            acarreo=0;
+                            i+=acarreo;
+                            si=true;
+                        }
+                        //FIN COMILLAS DOBLES
+                        else if(comillasD&&!comentario&&o[i]=='"'){
+                            res+='"</span>';
+                            comillasD=false;
+                            acarreo=0;
+                            i+=acarreo;
+                            si=true;
+                        }
+                        //COMILLA SIMPLE
+                        else if(!comentario&&!comillasD&&!comillaS&&o[i]=="'"&&o[i-1]!="\\"){
+                            res+="<span class='comillaSJs'>'";
+                            comillaS=true;
+                            acarreo=0;
+                            i+=acarreo;
+                            si=true;
+                        }
+                        //FIN COMILLA SIMPLE
+                        else if(comillaS&&!comentario&&o[i]=="'"){
+                            res+="'</span>";
+                            comillaS=false;
+                            acarreo=0;
+                            i+=acarreo;
+                            si=true;
+                        }
+
+                        if(!si) {
+                            res+=o[i];
+                            acarreo=1;
+                        }si=false;
+                        //ANTIERROR
+                        if(o[i+1]===undefined){
+                            break;
+                        }
+                    }
+                } else {
+                    return false;
+                }
+                
+                e.innerHTML=res;
+            }
+
+            
+            //AJUSTE DE <CODE>
+            let codigos=document.getElementsByTagName("code");
+            let codigosL=codigos.length;
+            for(let i=0; i<codigosL; i++){
+                codigos[i].innerHTML=reemplazar(codigos[i].innerHTML, {"<":"&#60;", ";;":"&#60;"});
+                ajusteTab(codigos[i]);
+                aplicarCode(codigos[i]);
+            }
+
+            //AJUSTE DE <p>
+            let parrafos=document.getElementsByTagName("p");
+            let parrafosL=parrafos.length;
+            for(let i=0; i<parrafosL; i++){
+                let parrafoS=parrafos[i].innerHTML.split("\n");console.log(parrafoS);
+                let parrafosSL=parrafoS.length;
+                if(parrafosSL>1){
+                    let res="";
+                    for(let i=0; i<parrafosSL-1; i++){
+                        //let si=(parrafoS[parrafosSL-1]==">"&&parrafoS[parrafosSL-2]=="r"&&parrafoS[parrafosSL-3]=="b"&&parrafoS[parrafosSL-4]=="<")?true:false;
+                        //if(si){
+                        res+=recortar(parrafoS[i])+"<br>";
+                    }
+                    parrafos[i].innerHTML=res;
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>
